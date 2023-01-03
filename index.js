@@ -9,7 +9,7 @@ const checkHost = require("./middleWares/middleWare");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ Access-Control-Allow-Origin: *}));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
