@@ -9,7 +9,7 @@ const checkHost = require("./middleWares/middleWare");
 
 const app = express();
 
-app.use(cors({origin:"https://sortly.netlify.app/"}));
+app.use(cors());
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
