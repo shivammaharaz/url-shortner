@@ -15,7 +15,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 // app.set("trust proxy", true);
 
+
+app.get("/",async(req,resp)=>{
+  resp.send("hello from sortly")
+})
 // creating-sortUrl
+
 app.post("/", checkHost, async (req, res, next) => {
   try {
     const { url } = req.body;
