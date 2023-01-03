@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
 
+mongoose.set("strictQuery", false);
+
 mongoose.connect(
   "mongodb://localhost:27017/Url-Shorner",
   {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useNewUrlParser: true
   },
   (err) => {
     if (!err) {
