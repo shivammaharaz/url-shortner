@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 mongoose.set("strictQuery", true);
 
 mongoose.connect(
-  "mongodb://localhost:27017/Url-Shorner",
+  "mongodb+srv://Shivam:2001@cluster0.bxo7vjp.mongodb.net/url_sortner",
   {
-    useNewUrlParser: true
+    useNewUrlParser: true,
   },
   (err) => {
     if (!err) {

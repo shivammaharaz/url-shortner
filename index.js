@@ -1,7 +1,7 @@
 const express = require("express");
 const shortId = require("shortid");
 const mongoose = require("mongoose");
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5500;
 const shortUrl = require("./models/url");
 const cors = require("cors");
 // middlewARE
@@ -15,10 +15,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 // app.set("trust proxy", true);
 
-
-app.get("/",async(req,resp)=>{
-  resp.send("hello from sortly")
-})
+app.get("/", async (req, resp) => {
+  resp.send("hello from sortly");
+});
 // creating-sortUrl
 
 app.post("/", checkHost, async (req, res, next) => {
@@ -59,6 +58,6 @@ app.get("/:shortId", async (req, resp, next) => {
   else resp.send("<h1 style='textAlign:center;'>url doesnot exist</h1> ");
 });
 
-app.listen(PORT, () => {
+app.listen(5500, () => {
   console.log("listening");
 });

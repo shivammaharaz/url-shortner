@@ -6,17 +6,18 @@ const checkHost = async (req, res, next) => {
     req.socket.remoteAddress;
   const hostName = url(urls).hostname;
   //   console.log(hostName, ip);
-  if (
-    hostName === "zipaworld.com" ||
-    hostName === "couser.zipaworld.com" ||
-    hostName === "cocust.zipaworld.com" ||
-    hostName === "www.aaa2innovate.com" ||
-    hostName === "www.tafrishaala.com"
-  ) {
-    next();
-  } else {
-    res.status(401).json({ msg: "unauthorised hostName" });
-  }
+  // if (
+  //   hostName === "zipaworld.com" ||
+  //   hostName === "couser.zipaworld.com" ||
+  //   hostName === "cocust.zipaworld.com" ||
+  //   hostName === "www.aaa2innovate.com" ||
+  //   hostName === "www.tafrishaala.com"
+  // ) {
+  //   next();
+  // } else {
+  //   res.status(401).json({ msg: "unauthorised hostName" });
+  // }
+  next();
 };
 
 module.exports = checkHost;
