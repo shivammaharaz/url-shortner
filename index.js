@@ -30,7 +30,7 @@ app.post("/", checkHost, async (req, res, next) => {
     const urlExists = await shortUrl.findOne({ fullUrl: url });
     if (urlExists) {
       res.json({
-        url: `https://url-shortner-git-master-shivammaharaz.vercel.app/${urlExists.shortId}`,
+        url: `https://url-shortner-shivammaharaz.vercel.app/${urlExists.shortId}`,
       });
     } else {
       const shortsUrl = new shortUrl({
@@ -41,7 +41,7 @@ app.post("/", checkHost, async (req, res, next) => {
       const result = await shortsUrl.save();
 
       res.json({
-        url: `https://url-shortner-git-master-shivammaharaz.vercel.app/${result.shortId}`,
+        url: `https://url-shortner-shivammaharaz.vercel.app/${result.shortId}`,
       });
     }
   } catch (error) {
