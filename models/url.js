@@ -29,7 +29,12 @@ const urlSchema = new Schema({
     type: String,
     required: true,
   },
-});
+isDeleted: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  { timestamps: true });
 
 const shortUrl = model("shorturl", urlSchema);
 module.exports = shortUrl;
