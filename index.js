@@ -40,6 +40,7 @@ app.post("/", checkHost, async (req, res, next) => {
         fullUrl: url,
         shortId: shortId.generate(),
         ip: req.body.ip,
+        ipInfo: req.body.ipInfo,
       });
       const result = await shortsUrl.save();
 

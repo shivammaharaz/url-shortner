@@ -16,25 +16,28 @@ mongoose.connect(
 
 const { Schema, model } = mongoose;
 
-const urlSchema = new Schema({
-  fullUrl: {
-    type: String,
-    required: true,
-  },
-  shortId: {
-    type: Object,
-    required: true,
-  },
-  ip: {
-    type: String,
-    required: true,
-  },
-isDeleted: {
+const urlSchema = new Schema(
+  {
+    fullUrl: {
+      type: String,
+      required: true,
+    },
+    shortId: {
+      type: Object,
+      required: true,
+    },
+    ip: {
+      type: String,
+      required: true,
+    },
+    ipInfo: { type: {} },
+    isDeleted: {
       type: Boolean,
       default: false,
     },
   },
-  { timestamps: true });
+  { timestamps: true }
+);
 
-const shortUrl = model("shorturl", urlSchema);
+const shortUrl = model("shorturlss", urlSchema);
 module.exports = shortUrl;
