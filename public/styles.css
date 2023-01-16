@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(109,112,162);
+background: radial-gradient(circle, rgba(109,112,162,1) 95%, rgba(148,187,233,1) 100%);
+    
+}
+.main h1{
+    font-size: 6rem;
+}
