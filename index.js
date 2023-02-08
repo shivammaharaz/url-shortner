@@ -7,6 +7,7 @@ const cors = require("cors");
 const path = require("path");
 const fp = path.join(__dirname + "/public");
 // middlewARE
+// midd
 const checkHost = require("./middleWares/middleWare");
 
 const app = express();
